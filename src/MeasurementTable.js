@@ -59,7 +59,7 @@ class MeasurementTable extends Component {
 
         return (
             <div>
-                <p> My Table Data</p>
+                <p> My Table Data test</p>
                 <table onClick={this.handleClick} style={styleTable}>
                     <thead>
                     <tr>
