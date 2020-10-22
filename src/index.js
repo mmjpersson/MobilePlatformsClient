@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import MeasurmentTable from './MeasurementTable';
+import Main from "./Main";
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <MeasurmentTable/>
+        <Main/>
     </React.StrictMode>,
     document.getElementById('root')
 );

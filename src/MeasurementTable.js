@@ -81,12 +81,6 @@ class MeasurementTable extends Component {
                 </table>
 
 
-                <div>
-                    <p> Average consumption Phone: {(sumPhone / 20).toFixed(2)}</p>
-                    <p> Average production Solar: {(sumSolar / 20).toFixed(4)}</p>
-                    <p> Average consumption TV: {(sumTV / 20).toFixed(2)}</p>
-                    <p> Average consumption Laptop: {(sumLaptop / 20).toFixed(2)}</p>
-                </div>
 
 
             </div>
