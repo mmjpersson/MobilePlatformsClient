@@ -15,17 +15,10 @@ class MeasurementTable extends Component {
         super(props);
         this.state = {
             table: [],
-            clickCount: 0
         };
-        this.handleClick = this.handleClick.bind(this);
+
     }
 
-    handleClick() {
-        this.setState(
-            {
-                clickCount: this.state.clickCount + 1
-            })
-    }
 
     componentDidMount() {
         this.callAPI();
@@ -50,36 +43,45 @@ class MeasurementTable extends Component {
         };
 
         const {table} = this.state;
-        var sum = 0;
+        var sumPhone = 0;
+        var sumSolar = 0;
+        var sumTV = 0;
+        var sumLaptop = 0;
 
         table.forEach(e => {
-            sum += e.temperature;
+            sumPhone+= e.handy;
+            sumSolar+= e.solar_modul;
+            sumTV+= e.fernseher;
+            sumLaptop+= e.laptop;
         });
 
 
         return (
             <div>
-                <p> My Table Data test</p>
-                <table onClick={this.handleClick} style={styleTable}>
+                <p> My Table Data</p>
+                <table  style={styleTable}>
                     <thead>
                     <tr>
-                        <td>Temperature</td>
                         <td>Time</td>
+                        <td>phone</td>
+                        <td>solar</td>
+                        <td>TV</td>
+                        <td>Laptop</td>
                     </tr>
                     </thead>
                     <tbody style = {body}>{table.map(t => (
                         <tr>
-                            <td>{t.temperature} </td>
-                            <td>{t.unix_timestamp} </td>
+                            <td>{t.timestamp} </td>
+                            <td>{t.handy} </td>
+                            <td>{t.solar_modul} </td>
+                            <td>{t.fernseher} </td>
+                            <td>{t.laptop} </td>
                         </tr>
                     ))}</tbody>
                 </table>
-                <div>
-                    Average temp: {(sum / 5).toFixed(2)}
-                </div>
-                <div>
-                    Click count : {this.state.clickCount}
-                </div>
+
+
+
 
             </div>
         );
@@ -89,4 +91,4 @@ class MeasurementTable extends Component {
 }
 
 export default MeasurementTable
- /// test
+/// test
