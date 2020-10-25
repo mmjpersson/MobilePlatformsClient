@@ -57,14 +57,14 @@ class LineRechart extends Component {
 
           */
 
-           <LineChart width={730} height={250} data={solar.map}
+           <LineChart width={730} height={250} data={solar}
                        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
+                <XAxis dataKey="solar_modul" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="Product A" stroke="#0095FF" />
+                <Line type="monotone" dataKey="solar_modul" stroke="#0095FF" />
 
             </LineChart>
 

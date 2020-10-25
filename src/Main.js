@@ -5,7 +5,7 @@ import {
     HashRouter
 } from "react-router-dom";
 import MeasurementTable from "./MeasurementTable";
-import Average from "./Average";
+import Overview from "./Overview";
 import lineRechart from "./lineRechart";
 import "./Main.css";
 
@@ -16,13 +16,13 @@ class Main extends Component {
                 <div>
                     <h1>Power Display</h1>
                     <ul className="header">
-                        <li><NavLink exact to="/">Measurements</NavLink></li>
-                        <li><NavLink to="/Average">Average</NavLink></li>
+                        <li><NavLink exact to="/">Overview</NavLink></li>
+                        <li><NavLink to="/Average">Measurements</NavLink></li>
                         <li><NavLink to="/lineRechart">Graphs</NavLink></li>
                     </ul>
                     <div className="content">
-                        <Route exact path="/" component={MeasurementTable}/>
-                        <Route path="/Average" component={Average}/>
+                        <Route exact path="/" component={Overview}/>
+                        <Route path="/Average" component={MeasurementTable}/>
                         <Route path="/lineRechart" component={lineRechart}/>
 
                     </div>
