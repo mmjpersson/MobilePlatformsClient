@@ -18,7 +18,7 @@ class Main extends Component {
                     <ul className="header">
                         <li><NavLink exact to="/">Overview</NavLink></li>
                         <li><NavLink to="/Average">Measurements</NavLink></li>
-                        <li><NavLink to="/lineRechart">Graphs</NavLink></li>
+                        <li><NavLink to="/lineRechart">Graph</NavLink></li>
                     </ul>
                     <div className="content">
                         <Route exact path="/" component={Overview}/>

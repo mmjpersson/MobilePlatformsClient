@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "./Average.css";
+import "./Overview.css";
 
 class Overview extends Component {
 
@@ -40,6 +40,7 @@ class Overview extends Component {
         var sumSolar = 0;
         var sumTV = 0;
         var sumLaptop = 0;
+        //var sumtest = 80;
         var sumTotal = sumSolar + sumLaptop + sumTV + sumPhone;
         table.forEach(e => {
             sumPhone+= e.handy;
@@ -48,10 +49,23 @@ class Overview extends Component {
             sumLaptop+= e.laptop;
         });
         var sumTotal = sumSolar + sumLaptop + sumTV + sumPhone;
+
         const sum = {
             fontWeight: "bold",
             color: sumTotal>100 ? "red"  : "green",
         };
+
+        const text1 = {
+            display: sumTotal>200 ? "initial" : "none",
+        }
+
+        const text2 = {
+            display: sumTotal>-199 && sumTotal<=199 ? "initial" : "none",
+        }
+
+        const text3 = {
+            display: sumTotal<=-200 ? "initial" : "none",
+        }
 
         return (
             <div>
@@ -83,7 +97,16 @@ class Overview extends Component {
                     </tr>
                 </table>
 
+                <div>
+                    <p></p>
+                    <p></p>
+                    <h3 style = {text1}> Oh there is no sun! It would be better if you reduce your power consumption. </h3>
+                    <h3 style = {text2}> Doing really great! You can leave everything like it is. </h3>
+                    <h3 style = {text3}> It is so sunny. See if you can use all the power coming in. </h3>
+                </div>
             </div>
+
+
         );
 
     }
