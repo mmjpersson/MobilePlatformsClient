@@ -32,61 +32,39 @@ class MeasurementTable extends Component {
 
     }
 
-    render() {
-        const styleTable ={
-            border: "1px solid black",
-            padding: "10px"
-        };
-        const body = {
-            color: "red",
-            width: "100px"
-        };
+render() {
+    const {table} = this.state;
 
-        const {table} = this.state;
-        var sumPhone = 0;
-        var sumSolar = 0;
-        var sumTV = 0;
-        var sumLaptop = 0;
+    return (
+        <div>
+            <h1> Power Consumption Table </h1>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Phone</th>
+                    <th>Solar</th>
+                    <th>TV</th>
+                    <th>Laptop</th>
+                </tr>
 
-        table.forEach(e => {
-            sumPhone+= e.handy;
-            sumSolar+= e.solar_modul;
-            sumTV+= e.fernseher;
-            sumLaptop+= e.laptop;
-        });
-
-
-        return (
-            <div>
-                <p> My Table Data</p>
-                <table  style={styleTable}>
-                    <thead>
+                <tbody>{table.map(t => (
                     <tr>
-                        <td>Time</td>
-                        <td>phone</td>
-                        <td>solar</td>
-                        <td>TV</td>
-                        <td>Laptop</td>
+                        <td>{t.timestamp} </td>
+                        <td>{t.handy} </td>
+                        <td>{t.solar_modul} </td>
+                        <td>{t.fernseher} </td>
+                        <td>{t.laptop} </td>
                     </tr>
-                    </thead>
-                    <tbody style = {body}>{table.map(t => (
-                        <tr>
-                            <td>{t.timestamp} </td>
-                            <td>{t.handy} </td>
-                            <td>{t.solar_modul} </td>
-                            <td>{t.fernseher} </td>
-                            <td>{t.laptop} </td>
-                        </tr>
-                    ))}</tbody>
-                </table>
+                ))}</tbody>
+            </table>
 
 
 
 
-            </div>
-        );
+        </div>
+    );
 
-    }
+}
 
 }
 
