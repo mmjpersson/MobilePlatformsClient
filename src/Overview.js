@@ -36,19 +36,23 @@ class Overview extends Component {
 
 
         const {table} = this.state;
-        var sumPhone = 0;
+        var sumCar = 0;
+        var sumWashing = 0;
         var sumSolar = 0;
         var sumTV = 0;
         var sumLaptop = 0;
         //var sumtest = 80;
-        var sumTotal = sumSolar + sumLaptop + sumTV + sumPhone;
+
+
         table.forEach(e => {
-            sumPhone+= e.handy;
+            sumCar+= e.car;
             sumSolar+= e.solar_modul;
             sumTV+= e.fernseher;
             sumLaptop+= e.laptop;
+            sumWashing+= e.washing_machine
         });
-        var sumTotal = sumSolar + sumLaptop + sumTV + sumPhone;
+
+        var sumTotal = sumSolar + sumLaptop + sumTV + sumCar + sumWashing;
 
         const sum = {
             fontWeight: "bold",
@@ -73,11 +77,15 @@ class Overview extends Component {
                 <table>
                     <tr>
                         <th>Device</th>
-                        <th> Consumption last 30 minutes</th>
+                        <th> Consumption last 100 minutes</th>
                     </tr>
                     <tr>
-                        <td>Phone </td>
-                        <td>{(sumPhone)} </td>
+                        <td>Car </td>
+                        <td>{(sumCar)} </td>
+                    </tr>
+                    <tr>
+                        <td>Washing machine </td>
+                        <td>{(sumWashing)} </td>
                     </tr>
                     <tr>
                         <td>TV </td>

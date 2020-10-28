@@ -41,19 +41,22 @@ render() {
             <table>
                 <tr>
                     <th>Time</th>
-                    <th>Phone</th>
-                    <th>Solar</th>
+                    <th>Car</th>
+                    <th>Washing machine</th>
                     <th>TV</th>
                     <th>Laptop</th>
+                    <th>Solar</th>
                 </tr>
 
                 <tbody>{table.map(t => (
                     <tr>
                         <td>{t.timestamp} </td>
-                        <td>{t.handy} </td>
-                        <td>{t.solar_modul} </td>
+                        <td>{t.car} </td>
+                        <td>{t.washing_machine} </td>
                         <td>{t.fernseher} </td>
                         <td>{t.laptop} </td>
+                        <td>{t.solar_modul} </td>
+
                     </tr>
                 ))}</tbody>
             </table>

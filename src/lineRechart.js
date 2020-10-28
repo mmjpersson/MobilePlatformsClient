@@ -60,7 +60,7 @@ class LineRechart extends Component {
            <LineChart width={730} height={250} data={solar}
                        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="solar_modul" />
+                <XAxis dataKey="timestamp" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
