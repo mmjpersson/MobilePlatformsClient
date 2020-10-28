@@ -5,7 +5,7 @@ class Overview extends Component {
 
 
     callAPI() {
-        fetch("http://localhost:1337/")
+        fetch("https://mobileplatformsapi.azurewebsites.net/")
             .then(res => res.json())
             .then(data => this.setState({table: data}))
             .catch(err => err);
