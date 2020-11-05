@@ -5,7 +5,7 @@ class Overview extends Component {
 
 
     callAPI() {
-        fetch("https://mobileplatforms.herukoapp.com")
+        fetch("http://localhost:1337/Graphs")
             .then(res => res.json())
             .then(data => this.setState({table: data}))
             .catch(err => err);
