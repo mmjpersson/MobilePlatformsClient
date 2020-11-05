@@ -5,7 +5,7 @@ import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'r
 class LineRechart extends Component {
 
     callAPI() {
-        fetch("https://mobileplatforms.herukoapp.com")
+        fetch("http://localhost:1337/Graphs")
             // https://mobileplatforms.herukoapp.com
             // http://localhost:1337/Graphs
             // https://white-flower-003b77f03.azurestaticapps.net/#/lineRechart
