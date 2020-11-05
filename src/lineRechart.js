@@ -5,8 +5,8 @@ import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'r
 class LineRechart extends Component {
 
     callAPI() {
-        fetch("https://white-flower-003b77f03.azurestaticapps.net/#/lineRechart")
-            //http://localhost:1337/Graphs
+        fetch("http://localhost:1337/Graphs")
+            // https://white-flower-003b77f03.azurestaticapps.net/#/lineRechart
             .then(res => res.json())
             .then(data => this.setState({solar: data}))
             .catch(err => err);

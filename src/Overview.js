@@ -5,7 +5,7 @@ class Overview extends Component {
 
 
     callAPI() {
-        fetch("https://mobileplatformsapi.azurewebsites.net/")
+        fetch("https://mobileplatforms.herukoapp.com")
             .then(res => res.json())
             .then(data => this.setState({table: data}))
             .catch(err => err);
