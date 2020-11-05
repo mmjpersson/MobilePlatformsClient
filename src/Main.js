@@ -8,6 +8,7 @@ import MeasurementTable from "./MeasurementTable";
 import Overview from "./Overview";
 import lineRechart from "./lineRechart";
 import "./Main.css";
+import AdminLogin from "./AdminLogin";
 
 class Main extends Component {
     render() {
@@ -19,11 +20,13 @@ class Main extends Component {
                         <li><NavLink exact to="/">Overview</NavLink></li>
                         <li><NavLink to="/Average">Measurements</NavLink></li>
                         <li><NavLink to="/lineRechart">Graph</NavLink></li>
+                        <li><NavLink to="/AdminLogin">Admin Login</NavLink></li>
                     </ul>
                     <div className="content">
                         <Route exact path="/" component={Overview}/>
                         <Route path="/Average" component={MeasurementTable}/>
                         <Route path="/lineRechart" component={lineRechart}/>
+                        <Route path="/AdminLogin" component={AdminLogin}/>
 
                     </div>
                 </div>
