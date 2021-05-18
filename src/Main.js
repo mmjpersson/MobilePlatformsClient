@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import {
     Route,
     NavLink,
@@ -26,7 +27,7 @@ class Main extends Component {
                         <Route exact path="/" component={Overview}/>
                         <Route path="/Average" component={MeasurementTable}/>
                         <Route path="/lineRechart" component={lineRechart}/>
-                        <Route path="/AdminLogin" component={AdminLogin}/>
+                        <Route exact path="/AdminLogin" component={AdminLogin}/>
 
                     </div>
                 </div>

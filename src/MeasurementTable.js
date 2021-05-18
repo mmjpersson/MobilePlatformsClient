@@ -5,7 +5,7 @@ class MeasurementTable extends Component {
 
 
     callAPI() {
-        fetch("https://mobileplatforms.herokuapp.com/")
+        fetch("http://localhost:1337/")
             .then(res => res.json())
             .then(data => this.setState({table: data}))
             .catch(err => err);
